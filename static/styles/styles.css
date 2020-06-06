@@ -1,0 +1,14 @@
+body {
+	background-color: powderblue;
+}
+h1 {
+	color: blue;
+}
+p {
+	color: black;
+}
+p.code {
+	background-color: white;
+	color: black
+}
+

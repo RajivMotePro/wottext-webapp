@@ -1,0 +1,45 @@
+<!DOCTYPE HTMLS>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}"/>
+	<title>The Wheel of Time Text Toys</title>
+</head>
+
+<body>
+	<header>
+		<h1>The Wheel of Time - Text Toys</h1>
+		<nav>
+			<h2>The Books</h2>
+			<ul>
+				<li>Book 0: New Spring</li>
+				<li>Book 1: The Eye of the World</li>
+				<li>Book 2: The Great Hunt</li>
+				<li>Book 3: The Dragon Reborn</li>
+				<li>Book 4: The Shadow Rising</li>
+				<li>Book 5: The Fires of Heaven</li>
+				<li>Book 6: Lord of Chaos</li>
+				<li>Book 7: A Crown of Swords</li>
+				<li>Book 8: The Path of Daggers</li>
+				<li>Book 9: Winter&#39;s Heart</li>
+				<li>Book 10: Crossroads of Twilight</li>
+				<li>Book 11: Knife of Dreams</li>
+				<li>Book 12: The Gathering Storm</li>
+				<li>Book 13: Towers of Midnight</li>
+				<li>Book 14: A Memory of Light</li>
+			</ul>
+		</nav>
+	</header>
+
+	<section>
+		<h2>Search the Books</h2>
+		<form action="/search" method="GET">
+			<label for="wotQuery">Question or Search</label>
+			<input type="text" name="query" id="wotQuery"/>
+			<input type="submit" value="Submit"/>
+		</form>
+	</section>
+</body>
+
+</html>
