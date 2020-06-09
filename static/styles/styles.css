@@ -7,7 +7,7 @@ h1 {
 p {
 	color: black;
 }
-p.code {
+code {
 	background-color: white;
 	color: black
 }

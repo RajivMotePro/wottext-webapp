@@ -16,9 +16,14 @@
 	</header>
 
 	<section>
-		<h2>Search Results for</h2>
-		<p><code>{{ query }}</code></p>
-		<p>TO DO</p>
+		<h2>Search Results for:</h2>
+		<h3><code>{{ query }}</code></h3>
+		{% for search_result in search_results %}
+			<article>
+				<h3>{{ search_result['Type'] }} - {{ search_result['DocumentTitle'] }}</h3>
+				<p>{{ search_result['DocumentExcerpt'] }}</p>
+			</article>
+		{% endfor %}
 	</section>
 </body>
 

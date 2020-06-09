@@ -1,3 +1,5 @@
+from typing import Dict, List, Any
+
 from flask import Flask
 from flask import render_template
 from flask import request
@@ -16,9 +18,14 @@ def search():
     query = request.args.get('query')
     kendraIndex = '2829b6aa-2333-450f-9bf2-584afba7a37c'
     response = kendra.query(QueryText = query, IndexId = kendraIndex)
-    # TODO
-    # Render page
-    return render_template('search-results.html', query=query)
+    search_results: List[Dict[str, Any]] = []
+    for query_result in response['ResultItems']:
+        search_result = {
+            'Type': query_result['Type'],
+            'DocumentTitle': query_result['DocumentTitle']['Text'],
+            'DocumentExcerpt': query_result['DocumentExcerpt']['Text'] }
+        search_results.append(search_result)
+    return render_template('search-results.html', query=query, search_results=search_results)
 
 @app.route('/book')
 def book():
